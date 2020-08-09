@@ -1,23 +1,39 @@
 import pygame
 import random
 import sys
+
+
+
 # Initializing pygame
 pygame.init()
+
+
+
 # Window resolution
 WIDTH = 1024
 HEIGHT = 768
+
+
+
 # Color Grid
 RED = (178,34,34)
 BLUE = (65,105,225)
 YELLOW = (255,255,0)
 BACKGROUND_COLOR = (139,137,137)
+
+
+
 # Player block Size and Position
 player_size = 50
 player_pos = [WIDTH/2, HEIGHT-2*player_size]
+
+
 # Block size position and list 
 block_size = 50
 block_position = [random.randint(0,WIDTH-block_size), 0]
 block_list = [block_position]
+
+
 # Game speed
 SPEED = 10
 
@@ -28,8 +44,12 @@ game_over = False
 score = 0
 
 clock = pygame.time.Clock()
+
+
 # Font style for the game
 font_style = pygame.font.SysFont("monospace", 35)
+
+
 # Level and speed increases as player advances
 def set_level(score, SPEED):
 	''' This function sets the speed and score '''
